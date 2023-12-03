@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">HabitJourney</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dailies</string>
+    <string name="health">Health</string>
+    <string name="_50_50">50/50</string>
+    <string name="experience">Experience</string>
+    <string name="rank_up">Rank Up</string>
+    <string name="textview">TextView</string>
+
+</resources>

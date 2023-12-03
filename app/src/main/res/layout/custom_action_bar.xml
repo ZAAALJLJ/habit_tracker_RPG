@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/custom_action_bar.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/custom_action_bar_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Your custom TextView with an ID -->
+    <TextView
+        android:id="@+id/custom_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/font2"
+        android:gravity="center_vertical"
+        android:text="Custom Title"
+        android:textColor="#88E5D9F4" />
+
+    <!-- Other custom ActionBar elements go here -->
+
+</RelativeLayout>
