@@ -12,7 +12,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.habittracker.ProgressUtil;
 import com.example.habittracker.addnew.AddNewHabit;
 import com.example.habittracker.database.HabitDatabaseHelper;
 import com.example.habittracker.MainActivity;

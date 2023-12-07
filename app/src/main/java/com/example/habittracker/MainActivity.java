@@ -25,10 +25,11 @@ import com.example.habittracker.addnew.AddNewTask;
 import com.example.habittracker.database.CharacterDatabaseHelper;
 import com.example.habittracker.databinding.ActivityMainBinding;
 import com.example.habittracker.ui.character.CharacterFragment;
+import com.example.habittracker.ui.daily.DailyFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class MainActivity extends AppCompatActivity implements onDialogClose {
+public class MainActivity extends AppCompatActivity implements onDialogClose, DailyFragment.HealthBarUpdateListener {
 
     private ActivityMainBinding binding;
     private CharacterDatabaseHelper characterHelper;
@@ -36,6 +37,8 @@ public class MainActivity extends AppCompatActivity implements onDialogClose {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
 
         // Color changer for default status bars
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -61,6 +64,13 @@ public class MainActivity extends AppCompatActivity implements onDialogClose {
     private void showCharacterCustomization() {
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.character_container, new CharacterFragment())
+                .commit();
+    }
+    private void addDailyFragment() {
+        DailyFragment dailyFragment = new DailyFragment();
+        dailyFragment.setHealthBarUpdateListener(this);
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.container, dailyFragment)
                 .commit();
     }
 
@@ -357,6 +367,8 @@ public class MainActivity extends AppCompatActivity implements onDialogClose {
 
         }
     }
+
+
 
     @Override
     public void onDialogClose(DialogInterface dialogInterface) {

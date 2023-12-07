@@ -44,7 +44,7 @@ public class HealthDatabaseHelper extends SQLiteOpenHelper {
 
     // Method to insert initial tasks
     private void insertInitialTasks(SQLiteDatabase db) {
-        String[] initialTasks = {"Task 1", "Task 2", "Task 3", "Task 4"};
+        String[] initialTasks = {"Drink 8 glasses of water", "Get 8 hours of sleep", "Meditate for 5 minutes"};
 
         ContentValues values = new ContentValues();
 

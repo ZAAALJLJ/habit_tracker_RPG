@@ -60,7 +60,7 @@ public class HealthAdapter extends RecyclerView.Adapter<HealthAdapter.MyViewHold
                     } else {
                         Log.d("ToDoAdapter", "MainActivity is null");
                     }
-                    holder.taskBox.setEnabled(true);
+                    holder.taskBox.setEnabled(false);
                 } else {
                     db.updateStatus(item.getId(), 0);
 
